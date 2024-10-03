@@ -91,45 +91,26 @@ The application supports the following languages for speech synthesis:
   - `langdetect`: For detecting the language of the uploaded text.
   - `googletrans`: For translating text to the desired language.
 
-## Setup Instructions
+## Technology Stack
 
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/your_username/your_repository.git
-    ```
+- **Backend**: Flask, Python, gTTS, PyMuPDF (for PDF processing), python-docx (for DOCX processing)
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Other Libraries**:
+  - `pydub`: For audio manipulation and merging.
+  - `concurrent.futures`: For multi-threaded text-to-speech processing.
+  - `langdetect`: For detecting the language of the uploaded text.
+  - `googletrans`: For translating text to the desired language.
+  - **FFmpeg**: Used via `pydub` for converting and processing audio files, merging MP3 chunks into one audio file.
 
-2. Navigate to the project directory:
-    ```bash
-    cd your_repository
-    ```
+## FFmpeg Installation
 
-3. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+To enable audio manipulation in this project, FFmpeg is required. You can install FFmpeg using the following commands based on your operating system:
 
-4. Create the necessary directories:
-    ```bash
-    mkdir uploads
-    mkdir audio
-    ```
+### Windows
+1. Download FFmpeg from the official website: [FFmpeg Downloads](https://ffmpeg.org/download.html)
+2. Add FFmpeg to your system's PATH environment variable.
 
-5. Run the application:
-    ```bash
-    flask run
-    ```
-
-6. Access the app at `http://127.0.0.1:5000/`.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Contributing
-
-Feel free to fork this repository, open issues, and submit pull requests!
-
-## Author
-
-Developed by [Your Name]. If you have any questions or feedback, feel free to contact me.
-
+### macOS
+```bash
+brew install ffmpeg
+```
