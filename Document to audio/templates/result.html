@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Complete</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Additional styles specific to audio player */
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-check"></i> Conversion Complete</h1>
+    </header>
+    <div class="container">
+        <div id="downloadSection">
+            <!-- Download link with icon -->
+            <a id="downloadLink" href="/download" class="download-link"><i class="fa fa-download"></i> Download Audio</a>
+            <!-- Audio player -->
+            <audio controls>
+                <source src="/download" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Optionally, you can include JavaScript here or in a separate file -->
+</body>
+</html>
