@@ -91,16 +91,6 @@ The application supports the following languages for speech synthesis:
   - `langdetect`: For detecting the language of the uploaded text.
   - `googletrans`: For translating text to the desired language.
 
-## Technology Stack
-
-- **Backend**: Flask, Python, gTTS, PyMuPDF (for PDF processing), python-docx (for DOCX processing)
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
-- **Other Libraries**:
-  - `pydub`: For audio manipulation and merging.
-  - `concurrent.futures`: For multi-threaded text-to-speech processing.
-  - `langdetect`: For detecting the language of the uploaded text.
-  - `googletrans`: For translating text to the desired language.
-  - **FFmpeg**: Used via `pydub` for converting and processing audio files, merging MP3 chunks into one audio file.
 
 ## FFmpeg Installation
 
